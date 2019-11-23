@@ -1,0 +1,41 @@
+version: '3.7'
+services:
+  laravel-db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: Admin123.
+      MYSQL_DATABASE: test
+      MYSQL_USER: user
+      MYSQL_PASSWORD: User123.
+    ports:
+      - 33007:3306
+    volumes:
+      - ./database/schemas/:/var/lib/mysql
+    networks:
+      laravel_net:
+        ipv4_address: 172.14.100.2
+  laravel-web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8081:80
+    volumes:
+      - ./api:/var/www/
+      - ./api/public:/var/www/html
+    networks:
+      laravel_net:
+        ipv4_address: 172.14.100.3
+    depends_on:
+      - laravel-db
+volumes:
+  api:
+  database:
+networks:
+  laravel_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        -
+          subnet: 172.14.100.0/24
