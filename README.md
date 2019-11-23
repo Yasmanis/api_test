@@ -8,7 +8,7 @@
 * `docker-compose up -d`
 > Conectarme al contenedor de la web.
 * `docker exec -it id_web_container /bin/bash`
-> Comandos para gestionar los permisos y que la app corra correctamente.
+> Comandos para gestionar los permisos y que la app se ejecute correctamente.
 * `cd /var/www`
 * `chown -R $USER:www-data storage`
 * `chown -R $USER:www-data bootstrap/cache`
