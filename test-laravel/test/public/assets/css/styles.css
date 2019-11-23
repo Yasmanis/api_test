@@ -1,0 +1,54 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.login-form {
+    background: white;
+    outline: 1px solid #80808045;
+    box-shadow: 2px 2px 20px 1px rgba(0,0,0,.6);
+}
+
+.form-create-edit {
+    background: white;
+    box-shadow: 2px 2px 20px 1px rgba(0,0,0,.6);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+body {
+    /*padding: 0 !important;*/
+    background-image: url(/assets/img/cover-blur.jpg) !important;
+}
+
+.center-element {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.main-vertical-separation{
+    margin-top: 70px !important;
+    margin-bottom: 70px !important;
+    background-color: white !important;
+    padding: 20px 15px !important;
+}
+
+.main-vertical-center{
+    height: 100vh;
+    display: table;
+}
+
+.div-vertical-center {
+    display: table-cell;
+    vertical-align: middle;
+}
